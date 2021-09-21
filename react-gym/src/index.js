@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import FormData from './App';
+import NameForm from './exp';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <FormData /> */}
+    <NameForm />
   </React.StrictMode>,
   document.getElementById('root')
 );
