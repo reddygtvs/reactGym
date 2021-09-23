@@ -47,3 +47,25 @@
   color: #f1356d;
   margin-bottom: 8px;
 }
+.routine-preview a{
+  text-decoration: none;
+}
+
+.routine-details h2 {
+  font-size: 20px;
+  color:#f1356d;
+  margin-bottom: 10px;
+}
+
+.routine-details div {
+  margin: 20px 0;
+}
+
+.routine-details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}

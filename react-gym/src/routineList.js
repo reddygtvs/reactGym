@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const RoutineList = ({ routines, title }) => {
     // const routines = props.routines;
     // const title = props.title;
@@ -6,8 +7,11 @@ const RoutineList = ({ routines, title }) => {
             <h2>{ title }</h2>
             {routines.map((routine) => (
                 <div className="routine-preview" key={routine.id}>
-                    <h2>{ routine.exercise }</h2>
-                    <p>Your max: { routine.weight }</p>
+                    <Link to={`/routines/${routine.id}`}>
+                        <h2>{ routine.exercise }</h2>
+                        <p>Your max: { routine.weight }</p>
+                    </Link>
+                    
                 </div>
             ))}
         </div>

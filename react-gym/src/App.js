@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 import Create from './Create';
+import RoutineDetails from './RoutineDetails';
 
 function App() {
   const source = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -20,6 +21,10 @@ function App() {
 
             <Route path="/create">
               <Create />
+            </Route>
+
+            <Route path="/routines/:id">
+              <RoutineDetails />
             </Route>
           </Switch>
         </div>
