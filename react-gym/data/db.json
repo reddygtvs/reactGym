@@ -1,0 +1,16 @@
+{
+    "routines": [
+        {
+            "exercise": "Deadlift",
+            "weight": "100 kg",
+            "reps": "5",
+            "id": 1 
+        },
+        {
+            "exercise": "Squat",
+            "weight": "80 kg",
+            "reps": "7",
+            "id": 2
+        }
+    ]
+}
