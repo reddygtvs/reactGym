@@ -8,7 +8,6 @@ const RoutineList = ({ routines, title }) => {
                 <div className="routine-preview" key={routine.id}>
                     <h2>{ routine.exercise }</h2>
                     <p>Your max: { routine.weight }</p>
-                    {/* <button onClick={() => handleDelete(routine.id)}>delete routine</button> */}
                 </div>
             ))}
         </div>

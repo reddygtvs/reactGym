@@ -1,28 +1,14 @@
 import { useState, useEffect } from 'react';
 import RoutineList from './routineList';
+import useFetch from './useFetch';
 
 const Home = () => {
-    const [routines, setRoutines] = useState([]);
-
-    const [name, setName] = useState('mario');
-
-    // const handleDelete = (id) => {
-    //     const newRoutines = routines.filter(routine => routine.id !== id);
-    //     setRoutines(newRoutines);
-    // }
-    useEffect(() => {
-        fetch('http://localhost:8000/routines')
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
-            console.log(data);
-            setRoutines(data);
-        })
-    }, []);
+    const { data: routines, isPending, error} = useFetch('http://localhost:8000/routines');
     return (
         <div className="home">
-            <RoutineList routines={routines} title="All Routines"/>
+            {error && <div> { error } </div>}
+            { isPending && <div>Loading...</div>}
+            { routines && <RoutineList routines={routines} title="All Routines"/> }
         </div>
       );
 }
