@@ -1,1 +1,0 @@
-exercise: 'Squat', weight: '80 kg', reps: '7', id: 2
