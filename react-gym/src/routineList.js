@@ -1,4 +1,4 @@
-const RoutineList = ({ routines, title, handleDelete }) => {
+const RoutineList = ({ routines, title }) => {
     // const routines = props.routines;
     // const title = props.title;
     return (
@@ -8,7 +8,7 @@ const RoutineList = ({ routines, title, handleDelete }) => {
                 <div className="routine-preview" key={routine.id}>
                     <h2>{ routine.exercise }</h2>
                     <p>Your max: { routine.weight }</p>
-                    <button onClick={() => handleDelete(routine.id)}>delete routine</button>
+                    {/* <button onClick={() => handleDelete(routine.id)}>delete routine</button> */}
                 </div>
             ))}
         </div>

@@ -11,6 +11,18 @@
             "weight": "80 kg",
             "reps": "7",
             "id": 2
+        },
+        {
+            "exercise": "Bench Press",
+            "weight": "60 kg",
+            "reps": "3",
+            "id": 3
+        },
+        {
+            "exercise": "Shoulder Press",
+            "weight": "50 kg",
+            "reps": "1",
+            "id": 4
         }
     ]
 }

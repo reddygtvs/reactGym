@@ -2,25 +2,27 @@ import { useState, useEffect } from 'react';
 import RoutineList from './routineList';
 
 const Home = () => {
-    const [routines, setRoutines] = useState([
-        { exercise: 'Deadlift', weight: '100 kg', reps: '5', id: 1 },
-        { exercise: 'Squat', weight: '80 kg', reps: '7', id: 2 },
-        { exercise: 'Bench Press', weight: '60 kg', reps: '3', id: 3 },
-        { exercise: 'Shoulder Press', weight: '50 kg', reps: '1', id: 4 }
-    ]);
+    const [routines, setRoutines] = useState([]);
 
     const [name, setName] = useState('mario');
 
-    const handleDelete = (id) => {
-        const newRoutines = routines.filter(routine => routine.id !== id);
-        setRoutines(newRoutines);
-    }
+    // const handleDelete = (id) => {
+    //     const newRoutines = routines.filter(routine => routine.id !== id);
+    //     setRoutines(newRoutines);
+    // }
     useEffect(() => {
-        console.log("use effect ran")
+        fetch('http://localhost:8000/routines')
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            console.log(data);
+            setRoutines(data);
+        })
     }, []);
     return (
         <div className="home">
-            <RoutineList routines={routines} title="All Routines" handleDelete={handleDelete}/>
+            <RoutineList routines={routines} title="All Routines"/>
         </div>
       );
 }
