@@ -1,13 +1,19 @@
 import { useState } from "react";
 
 const Create = () => {
-    const [maxWeight, setMaxWeight] = useState();
-    const [maxReps, setMaxReps] = useState();
+    const [maxWeight, setMaxWeight] = useState('');
+    const [maxReps, setMaxReps] = useState('');
     const [exercise, setExercise] = useState('');
+
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        const routines = {maxWeight, maxReps, exercise};
+        console.log(routines);
+    } 
     return (
         <div className="create">
             <h2>Add a New Routine</h2>
-            <form >                
+            <form onSubmit={handleSubmit}>                
                 <label>Enter your maximum weight lifted:</label>
                 <input
                     type="number"
