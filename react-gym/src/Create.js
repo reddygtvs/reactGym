@@ -4,16 +4,22 @@ const Create = () => {
     const [weight, setWeight] = useState('');
     const [reps, setReps] = useState('');
     const [exercise, setExercise] = useState('');
+    const [isPending, setIsPending] = useState(false);
+
 
     const handleSubmit = (e) =>{
         e.preventDefault();
         const routine = {exercise, weight, reps};
+
+        setIsPending(true);
+
         fetch('http://localhost:8000/routines', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(routine)
         }).then(() => {
             console.log('new routine added')
+            setIsPending(false);
         })
         // console.log(routine);
     } 
@@ -47,7 +53,9 @@ const Create = () => {
                     <option value="Shoulder Press">Shoulder Press</option>
                     <option value="Squat">Squat</option>
                 </select>   
-                <button>Submit</button> 
+                { !isPending && <button>Add Routine</button> }
+                { isPending && <button disabled>Adding Routine...</button> }
+                
                 <p>{weight}</p>
                 <p>{reps}</p>  
                 <p>{exercise}</p>                         

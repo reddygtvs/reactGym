@@ -35,6 +35,12 @@
       "weight": "100",
       "reps": "199",
       "id": 6
+    },
+    {
+      "exercise": "Bench Press",
+      "weight": "449",
+      "reps": "1",
+      "id": 7
     }
   ]
 }
