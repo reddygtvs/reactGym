@@ -25,22 +25,10 @@
       "id": 4
     },
     {
-      "maxWeight": "54",
-      "maxReps": "3",
-      "exercise": "Deadlift",
+      "exercise": "Squat",
+      "weight": "134",
+      "reps": "43",
       "id": 5
-    },
-    {
-      "exercise": "Shoulder Press",
-      "weight": "100",
-      "reps": "199",
-      "id": 6
-    },
-    {
-      "exercise": "Bench Press",
-      "weight": "449",
-      "reps": "1",
-      "id": 7
     }
   ]
 }

@@ -1,11 +1,11 @@
 import { useState } from "react";
-
+import { useHistory } from 'react-router-dom';
 const Create = () => {
     const [weight, setWeight] = useState('');
     const [reps, setReps] = useState('');
     const [exercise, setExercise] = useState('');
     const [isPending, setIsPending] = useState(false);
-
+    const history = useHistory();
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -20,6 +20,7 @@ const Create = () => {
         }).then(() => {
             console.log('new routine added')
             setIsPending(false);
+            history.push('/')
         })
         // console.log(routine);
     } 
