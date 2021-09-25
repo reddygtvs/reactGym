@@ -1,14 +1,21 @@
 import { useState } from "react";
 
 const Create = () => {
-    const [maxWeight, setMaxWeight] = useState('');
-    const [maxReps, setMaxReps] = useState('');
+    const [weight, setWeight] = useState('');
+    const [reps, setReps] = useState('');
     const [exercise, setExercise] = useState('');
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        const routines = {maxWeight, maxReps, exercise};
-        console.log(routines);
+        const routine = {exercise, weight, reps};
+        fetch('http://localhost:8000/routines', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(routine)
+        }).then(() => {
+            console.log('new routine added')
+        })
+        // console.log(routine);
     } 
     return (
         <div className="create">
@@ -17,16 +24,16 @@ const Create = () => {
                 <label>Enter your maximum weight lifted:</label>
                 <input
                     type="number"
-                    value={maxWeight}
-                    onChange={(e) => setMaxWeight(e.target.value)}
+                    value={weight}
+                    onChange={(e) => setWeight(e.target.value)}
                     required
                 />
             
                 <label>Enter your maximum reps for that weight:</label>
                 <input
                     type="number" 
-                    value={maxReps}
-                    onChange={(e) => setMaxReps(e.target.value)}
+                    value={reps}
+                    onChange={(e) => setReps(e.target.value)}
                     required
                 />
             
@@ -41,8 +48,8 @@ const Create = () => {
                     <option value="Squat">Squat</option>
                 </select>   
                 <button>Submit</button> 
-                <p>{maxWeight}</p>
-                <p>{maxReps}</p>  
+                <p>{weight}</p>
+                <p>{reps}</p>  
                 <p>{exercise}</p>                         
             </form>
         </div>

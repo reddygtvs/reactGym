@@ -1,28 +1,40 @@
 {
-    "routines": [
-        {
-            "exercise": "Deadlift",
-            "weight": "100 kg",
-            "reps": "5",
-            "id": 1 
-        },
-        {
-            "exercise": "Squat",
-            "weight": "80 kg",
-            "reps": "7",
-            "id": 2
-        },
-        {
-            "exercise": "Bench Press",
-            "weight": "60 kg",
-            "reps": "3",
-            "id": 3
-        },
-        {
-            "exercise": "Shoulder Press",
-            "weight": "50 kg",
-            "reps": "1",
-            "id": 4
-        }
-    ]
+  "routines": [
+    {
+      "exercise": "Deadlift",
+      "weight": "100 kg",
+      "reps": "5",
+      "id": 1
+    },
+    {
+      "exercise": "Squat",
+      "weight": "80 kg",
+      "reps": "7",
+      "id": 2
+    },
+    {
+      "exercise": "Bench Press",
+      "weight": "60 kg",
+      "reps": "3",
+      "id": 3
+    },
+    {
+      "exercise": "Shoulder Press",
+      "weight": "50 kg",
+      "reps": "1",
+      "id": 4
+    },
+    {
+      "maxWeight": "54",
+      "maxReps": "3",
+      "exercise": "Deadlift",
+      "id": 5
+    },
+    {
+      "exercise": "Shoulder Press",
+      "weight": "100",
+      "reps": "199",
+      "id": 6
+    }
+  ]
 }
